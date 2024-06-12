@@ -1,0 +1,85 @@
+.frame {
+    width: 100%;
+    max-width: 1440px;
+    height: 570px;
+    position: relative;
+
+    background-image: url('../../public/photo.png'); /* Ensure the image path is correct */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(81.21deg, #000000 2.32%, rgba(0, 0, 0, 0) 60.69%);
+  }
+  
+  /* .breadcrumb {
+    position: relative;
+    width: 122px;
+    height: 17px;
+    top: 21px;
+    left: 135px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0.01em;
+    color: white;
+    text-align: left;
+  } */
+  
+  .breadcrumb {
+    position: relative;
+    width: 126px;
+    height: 20px;
+    top: 36px;
+    left: 135px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0.01em;
+    color: white;
+    text-align: left;
+}
+.contact{
+    color: #888888;
+}
+
+
+  /* .large-text {
+    position: absolute;
+    width: 280px;
+    height: 65px;
+    top: 447px;
+    left: 134px;
+    font-family: 'Lato';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 65px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+
+    text-align: left;
+
+  }
+   */
+
+   .large-text {
+    position: absolute;
+    width: 280px;
+    height: 47px;
+    top: 352px;
+    left: 141px;
+    font-family: 'Lato';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 65px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-align: left;
+    padding-bottom: 23px;
+}
