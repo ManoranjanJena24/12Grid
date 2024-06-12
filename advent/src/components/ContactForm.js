@@ -11,21 +11,32 @@ const ContactForm = () => {
     email: ''
   });
   const [error, setError] = useState('');
+  const [contactError, setContactError] = useState('');
   const [showDialog, setShowDialog] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
 
   useEffect(() => {
     const allFieldsFilled = Object.values(formEntries).every((entry) => entry.trim() !== '');
-    setIsSubmitEnabled(allFieldsFilled && captchaVerified);
-  }, [formEntries, captchaVerified]);
+    setIsSubmitEnabled(allFieldsFilled && captchaVerified && !contactError);
+  }, [formEntries, captchaVerified, contactError]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormEntries((prevEntries) => ({
-      ...prevEntries,
-      [name]: value
-    }));
+
+    if (name === 'contactNumber') {
+      if (/^\d{0,10}$/.test(value)) {
+        setFormEntries((prevEntries) => ({
+          ...prevEntries,
+          [name]: value
+        }));
+      }
+    } else {
+      setFormEntries((prevEntries) => ({
+        ...prevEntries,
+        [name]: value
+      }));
+    }
   };
 
   const handleCaptchaChange = (value) => {
@@ -36,8 +47,11 @@ const ContactForm = () => {
     e.preventDefault();
     if (!/\S+@\S+\.\S+/.test(formEntries.email)) {
       setError('Please enter a valid email address');
+    } else if (formEntries.contactNumber.length !== 10) {
+      setContactError('Please enter a valid number');
     } else {
       setError('');
+      setContactError('');
       setShowDialog(true);
       // Handle form submission logic here
       console.log('Form Entries:', formEntries);
@@ -58,7 +72,7 @@ const ContactForm = () => {
 return (
     <div className="contact-frame">
       <form onSubmit={handleSubmit}>
-      {showDialog && <div className="dialog-box">Data submitted successfully!</div>}
+        {showDialog && <div className="dialog-box">Data submitted successfully!</div>}
         <div className="form-row">
           <div className="form-column"></div>
           <div className="message-text">Drop us a message, and we’ll get back to you in no time.</div>
@@ -83,6 +97,7 @@ return (
                 value={formEntries.contactNumber}
                 onChange={handleChange}
               />
+              {contactError && <div className="error-message">{contactError}</div>}
               <div className="line"></div>
             </div>
             <div className="form-group">
