@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+  }
+  
+  .header-text {
+    width: 156.22px;
+    height: 24.26px;
+    position: absolute;
+    top: 37.37px;
+    left: 204.89px;
+    color: black;
+  }
