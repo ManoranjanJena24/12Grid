@@ -5,6 +5,7 @@ import Frame from './components/Frame';
 import ContactForm from './components/ContactForm';
 import MapComponent from './components/MapComponent';
 import AddressComponent from './components/AddressComponent';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="container">
@@ -13,6 +14,8 @@ function App() {
       <ContactForm/>
       <MapComponent/>
       <AddressComponent/>
+      <Footer/>
+     
     </div>
   );
 }
