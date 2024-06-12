@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Frame from './components/Frame';
 import ContactForm from './components/ContactForm';
 import MapComponent from './components/MapComponent';
+import AddressComponent from './components/AddressComponent';
 function App() {
   return (
     <div className="container">
@@ -11,6 +12,7 @@ function App() {
       <Frame/>
       <ContactForm/>
       <MapComponent/>
+      <AddressComponent/>
     </div>
   );
 }
