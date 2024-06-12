@@ -126,6 +126,31 @@
     margin-left: -38px;
     margin-top: -30px;
 }
+.submit-button:disabled {
+    color: white;
+    background-color: #dedcdc;
+    cursor: not-allowed;
+    border: 1px solid #dedcdc;
+}
+
+.dialog-box {
+    height: 57px;
+    width: 400px;
+    color: #278714;
+    background: #cae6c8;
+    left: 53%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border: 2px solid green; /* Specify border width, style, and color */
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 0px #00000026;
+    justify-content: center;
+    top: 50px;
+}
+
+
 /* .submit-button {
     width: 100px;
     height: 50px;

@@ -50,6 +50,11 @@
     background: #F9F9F9;
     box-shadow: 5px 5px 15px 0px #00000026;
 }
+
+.text-container:hover{
+  background: #d0cbcb;
+
+}
   .text-card {
     width: 353px;
     height: 40px;
@@ -162,6 +167,17 @@
     background: #F9F9F9;
     box-shadow: 5px 5px 15px 0px #00000026;
   }
+
+  .textbox1:hover{
+    background: #d0cbcb;
+  
+  }
+
+  .textbox2:hover{
+    background: #d0cbcb;
+  
+  }
+
   
   .textbox2 {
     width: 470px;
